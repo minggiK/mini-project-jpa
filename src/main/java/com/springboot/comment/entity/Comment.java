@@ -2,7 +2,7 @@ package com.springboot.comment.entity;
 
 import com.springboot.audit.BaseEntity;
 import com.springboot.board.entity.Board;
-import com.springboot.member.entity.User;
+import com.springboot.user.entity.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

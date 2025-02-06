@@ -1,4 +1,4 @@
-package com.springboot.member.entity;
+package com.springboot.user.entity;
 
 
 import com.springboot.audit.BaseEntity;
@@ -7,6 +7,7 @@ import com.springboot.comment.entity.Comment;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @Getter
+@Setter
 @Entity
 @AllArgsConstructor
 public class User extends BaseEntity {
@@ -22,7 +24,7 @@ public class User extends BaseEntity {
     private Long userId;
 
     @Column(nullable = false)
-    private String name;
+    private String nickname;
 
     //생성할 때의 상태를 넣어줘야한다. -? enum도 레퍼런스타입이라 초기화 안되면 null로 들어가서 NPE 터짐 
     //상수를 입력하면 등록 순서가 생기는데, ORDINAL 로 지정하면 중간에 상수를 추가할 때, 번호가 바뀔 수 있어서 STRING 으로 지정
